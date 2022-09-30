@@ -1,1 +1,1 @@
-export { initJMLFile, indexJMLFile, logDebug } from "./JML";
+export { initJMLFile, indexJMLFile, logDebug, getFromJML } from "./JML";
