@@ -1,6 +1,6 @@
 {
   "name": "jml-format",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "jml is a custom file format like json, bson or yaml",
   "main": "index.js",
   "types": "index.d.ts",
