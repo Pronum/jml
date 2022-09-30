@@ -1,0 +1,31 @@
+{
+  "name": "jml-format",
+  "version": "1.1.1",
+  "description": "jml is a custom file format like json, bson or yaml",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "scripts": {
+    "compile": "tsc",
+    "clean": "rm -rf dist",
+    "prebuildpackage": "npm run clean && npm run compile && node dist/SetupPackage.js && npm publish dist/",
+    "buildpackage": "cd dist && npm pack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Pronum/jml.git"
+  },
+  "keywords": [
+    "Typescript",
+    "JML",
+    "jml-format",
+    "jml-file",
+    "jml-file-format",
+    ".jml"
+  ],
+  "author": "hz-rd",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Pronum/jml/issues"
+  },
+  "homepage": "https://github.com/Pronum/jml#readme"
+}
