@@ -1,3 +1,4 @@
+# Author(s)/Creator(s)
 <center><img src="https://discord.c99.nl/widget/theme-3/730699395967877160.png"/></center>
 
 # jml
@@ -17,17 +18,18 @@ $ymbols? | $ymb0ls & numb3r$ 4r3 w0rk1ng
 import { initJMLFile, indexJMLFile, getFromJML } from "jml-format";
 import path from "path";
 
-const main = ( ) => {
-    const fpath = path.join(__dirname + "/conf.jml");
+const fpath = path.join(__dirname + "/conf.jml");
 
-    initJMLFile(fpath);
-    setTimeout(( ) => {
-        const r: any = indexJMLFile();
-        const string: any = r;
-        console.log(getFromJML(string.list.items, "spacing is avaliable"));
-        console.log(getFromJML(string.list.items, "$ymbols?"));
-    }, 32);
-};
+(async () => {
+    var s: any;
+
+    // 👇 Await here is necessary, Or it wont initialize the JML File,
+    // 👇 Await is required to skip using "setTimeout()".
+    await initJMLFile(fpath).then( ( ) => s = indexJMLFile() );
+
+    console.log(getFromJML(s.list.items, "spacing is avaliable"));
+    console.log(getFromJML(s.list.items, "$ymbols?"));
+})();
 
 main();
 ```
@@ -41,10 +43,12 @@ main();
 -   spacing
 -   numbers
 -   symbols
+
 - jml can not work with :
 -   more than space after you finished the field or value, Like :
--     GOOD  👇:
--            this is a test | yep!
--     BAD   👇:
--            this is a test     |     yep!
+-     GOOD 👇:
+-      this is a test | yep!
+-     BAD 👇:
+-      this is a test     |     yep!
+
 -   no ability to put comments (Working on it)
