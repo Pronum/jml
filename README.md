@@ -30,8 +30,6 @@ const fpath = path.join(__dirname + "/conf.jml");
     console.log(getFromJML(s.list.items, "spacing is avaliable"));
     console.log(getFromJML(s.list.items, "$ymbols?"));
 })();
-
-main();
 ```
 
 ### Output:
