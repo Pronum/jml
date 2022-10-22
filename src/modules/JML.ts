@@ -24,7 +24,7 @@ const initJMLFile = ( filePath: string ) => {
 }
 
 const indexJMLFile = (  ) => {
-    var list: any = {
+    var list: object = {
         items: []
     };
 
